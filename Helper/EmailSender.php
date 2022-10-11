@@ -145,7 +145,7 @@ class EmailSender extends AbstractHelper
      *
      * @throws \Magento\Framework\Exception\MailException
      */
-    public function sendEmailOrder($emailTemplateVariables, $receiverInfo, $senderInfo = null, $tempId)
+    public function sendEmailOrder($emailTemplateVariables, $receiverInfo, $tempId, $senderInfo = null)
     {
         if (is_null($senderInfo)) {
             $transEmail = $this->getConfigValue('trans_email/ident_sales/email', $this->getStore()->getId());
